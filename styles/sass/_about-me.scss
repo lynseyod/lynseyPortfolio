@@ -1,0 +1,52 @@
+.about-me {
+  h2 {
+    margin-bottom: 2%;
+    @include header-shadow($pop2);
+  }
+  .down-arrow{
+    background-color: $pop2;
+  }
+  @include mq-tablet {
+    .flex-center {
+      flex-direction: column;
+    }
+  }
+}
+
+.headshot {
+  width: 20%;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10%;
+    left: -15%;
+    width: 90%;
+    height: 90%;
+    z-index: 10;
+    opacity: 70%;
+    background-image: url(./assets/color-spot-2-turq.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+  @include mq-tablet {
+    float: left;
+    width: 50%;
+    margin-bottom: 10%;
+  }
+}
+
+.profile {
+  margin-left: 5%;
+  width: 75%;
+  p:first-of-type {
+    margin-bottom: 5%;
+  }
+  @include mq-tablet {
+    margin-left: 0;
+    width: 100%;
+  }
+}

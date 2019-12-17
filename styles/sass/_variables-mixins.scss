@@ -1,0 +1,66 @@
+$font: 'Poppins', sans-serif;
+$main-light: #c2f7ff;
+$main-col: #23b1a5;
+$main-dark: #1d1144;
+$pop: #ff6799;
+$pop2: #f56a47;
+
+@mixin header-shadow($color) {
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 40%;
+    width: 125px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 20px;
+    background-color: $color;
+    opacity: 50%;
+    z-index: -10;
+  }
+}
+
+@mixin anchor-shadow($color) {
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 50%;
+    width: 50%;
+    top: 40%;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: $color;
+    opacity: 50%;
+    z-index: -10;
+    transition: width 0.3s;
+  }
+  &:hover::after,
+  &:focus::after {
+    width: 100%;
+  }
+}
+
+@mixin li-background-spot($asset) {
+  background-image: url($asset);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@mixin mq-tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin mq-mobile {
+  @media (max-width: 500px) {
+    @content;
+  }
+}

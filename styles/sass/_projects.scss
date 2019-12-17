@@ -1,0 +1,145 @@
+.projects {
+  background-color: $main-light;
+  position: relative;
+  h2 {
+    margin-bottom: 2%;
+    z-index: 10;
+    @include header-shadow($pop)
+  }
+  p {
+    width: 100%;
+  }
+  i {
+    font-size: 1.5rem;
+    margin: 0 1%;
+  }
+  .down-arrow {
+    background-color: $main-col;
+    bottom: 2%;
+  }
+}
+
+.project-container {
+  margin: 10% 0;
+  width: 100%;
+  min-height: 40vh;
+  justify-content: space-between;
+  &:nth-of-type(2n) {
+    .project-description {
+      order: -1;
+      @include mq-tablet {
+        order: 1;
+      }
+    }
+  }
+  &:nth-of-type(3n) {
+    .image-container {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        height: 125%;
+        width: 125%;
+        z-index: -1;
+        opacity: 70%;
+        background-image: url('./assets/color-spot-pink.png');
+        background-position: bottom right;
+        background-size: 80%;
+        background-repeat: no-repeat;
+      }    
+    }
+  }
+  &:nth-of-type(3n + 1) {
+    .image-container {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        height: 70%;
+        width: 70%;
+        z-index: 10;
+        opacity: 70%;
+        background-image: url('./assets/color-spot-turq.png');
+        background-position: bottom right;
+        background-size: 80%;
+        background-repeat: no-repeat;
+      }  
+    }
+  }
+  &:nth-of-type(3n + 2) {
+    .image-container {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -25%;
+        left: -25%;
+        height: 125%;
+        width: 125%;
+        z-index: -1;
+        opacity: 70%;
+        background-image: url('./assets/color-spot-orange.png');
+        background-position: bottom right;
+        background-size: 80%;
+        background-repeat: no-repeat;
+      }    
+    }
+  }
+  a {
+    position: relative;
+    z-index: 10;
+    @include anchor-shadow($pop);
+  }
+  @include mq-tablet {
+    flex-direction: column;
+  }
+  &:not(:last-of-type) {
+    @include mq-tablet {
+      margin-bottom: 5%;
+    }
+    @include mq-mobile {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.image-container {
+  width: 35%;
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s;
+  &::after {
+    transition: all 0.3s;
+  }
+  &:hover,
+  &:hover::after {
+    transform: scale(1.2);
+  }
+  @include mq-tablet {
+    width: 50%;
+    align-self: flex-end;
+  }
+  @include mq-mobile {
+    width: 100%;
+  }
+}
+
+
+.project-description {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 50%;
+  height: 100%;
+  @include mq-tablet {
+    width: 100%;
+  }
+}
+
+.info {
+  font-weight: bold;
+}

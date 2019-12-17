@@ -1,0 +1,94 @@
+html {
+  font-size: 125%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+}
+
+section {
+  padding: 2% 0;
+  min-height: 100vh;
+  @include mq-tablet {
+    padding-bottom: 200px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.down-arrow {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+  animation: bounce 1s;
+  img {
+    height: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@keyframes bounce {
+  0%, 50%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-50px);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-25px);
+  }
+}

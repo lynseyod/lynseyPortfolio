@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/3d22ae5abd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex-center relative">
+    <h1>Lynsey O'Donnell</h1>
+    <p>Web Developer</p>
+    <p>Something pithy but relatable</p>
+    <a class="down-arrow" href="#about-me" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
+  </header>
+  <main>
+    <section class="about-me relative" id="about-me">
+      <div class="wrapper">
+        <h2>About Me</h2>
+        <div class="flex-center">
+          <div class="headshot">
+            <img src="./styles/assets/headshot.jpg" alt="headshot of our heroine, Lynsey">
+          </div>
+          <div class="profile">
+            <p>Time passes ever faster as you sit here, listening to me swear at you about wizards. I have very strong feelings about right and wrong. Have you ever cried and high fived someone at the same time? because I'm just such an upbeat guy, usually, who only says positive things. This is all made up and none of it matters. 666. Yea, now I can see the insides of a computer. We create structure for the illusion of control, endlessly tumbling, endlessly empty...!</p>
+            <p>and then you do one thing React doesn't know about and it's like "WHAT THE HELL IS YOUR PROBLEM?" Until I take out the knife, I do look exactly like html. React is just one big story of broken relationships. This is what the professional world refers to as a clusterfuck, endlessly tumbling, endlessly empty...!</p>
+          </div> <!-- profile -->
+        </div> <!-- flex-center -->
+        <a class="down-arrow" href="#projects" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
+      </div> <!-- wrapper -->
+    </section> <!-- about me -->
+    <section class="projects" id="projects">
+      <div class="wrapper">
+        <h2>Projects</h2>
+        <div class="project-container flex-center">
+          <div class="image-container">
+            <img src="./styles/assets/rolling-index-laptop.png" alt="a screenshot of contact cards">
+          </div>
+          <div class="project-description flex-center">
+            <h3><a href="https://lynseyod.github.io/lynseyODonnellProject5/">Rolling Index</a></h3>
+            <p><span class="info">Uses:</span>
+              <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
+              <span class="visually-hidden">HTML5</span>
+              <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
+              <span class="visually-hidden">Sass</span>
+              <i aria-hidden="true" class="fab fa-react" title="react"></i>
+              <span class="visually-hidden">React</span>
+            </p>
+            <p>An online rolodex for freelancers and job-seekers.</p>
+            <p>Contact inforamtion is stored in Firebase. Contacts can be sorted by last name, company, or last date contacted.</p>
+          </div>
+        </div> <!-- rolling index -->
+        <div class="project-container flex-center">
+          <div class="image-container">
+            <img src="./styles/assets/cat-sweeper-laptop.png" alt="a screenshot of catsweeper">
+          </div>
+          <div class="project-description flex-center">
+            <h3><a href="https://lynseyod.github.io/lynseyODonnellProject3/">Catsweeper!</a></h3>
+            <p><span class="info">Uses:</span>
+              <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
+              <span class="visually-hidden">HTML5</span>
+              <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
+              <span class="visually-hidden">Sass</span>
+              <i aria-hidden="true" class="fab fa-js-square" title="JavaScript"></i>
+              <span class="visually-hidden">JavaScript</span>
+            </p>
+            <p>A minesweeper game with cats <span class="aside">(because, Internet)</span>.</p>
+            <p>Players click squares to uncover the number of 'cats' they are adjacent to. Try not to wake the sleeping felines!</p>
+          </div>
+        </div> <!-- catsweeper-->
+        <div class="project-container flex-center">
+          <div class="image-container">
+            <img src="./styles/assets/backronym-generator-laptop.png" alt="screenshot of backronym generator">
+          </div>
+          <div class="project-description flex-center">
+            <h3><a href="https://groupprojectsix.github.io/projectSix/">Backronym Generator</a></h3>
+            <p><span class="info">Uses:</span>
+              <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
+              <span class="visually-hidden">HTML5</span>
+              <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
+              <span class="visually-hidden">Sass</span>
+              <i aria-hidden="true" class="fab fa-react" title="React"></i>
+              <span class="visually-hidden">React</span>
+              <i aria-hidden="true" class="fas fa-code-branch" title="Git"></i>
+              <span class="visually-hidden">Git/Github</span>
+            </p>
+            <p>A fun way to shoehorn your acronyms!</p>
+            <p>Uses the datamuse API to generate a backronym based on a user-generated word. Built with 3 classmates using React and collaborating through Git/GitHub.</p>
+          </div>
+
+        </div> <!-- backronym generator-->
+        <a class="down-arrow" href="#tools" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
+      </div> <!-- wrapper -->
+    </section> <!-- projects -->
+    <section class="tools" id="tools">
+      <div class="wrapper">
+        <h2>My Toolbox</h2>
+        <ul class="toolbox flex-center">
+          <li><i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>HTML5</li>
+          <li><i aria-hidden="true" class="fab fa-css3-alt"></i>CSS3</li>
+          <li><i aria-hidden="true" class="fab fa-sass" title="Sass"></i>Sass</li>
+          <li><i aria-hidden="true" class="fab fa-js-square" title="JavaScript"></i>JavaScript</li>
+          <li><i aria-hidden="true" class="fab fa-react" title="React"></i>React</li>
+          <li><i aria-hidden="true" class="fas fa-code-branch" title="Git"></i>Git</li>
+          <li><i aria-hidden="true" class="fab fa-google"></i>Firebase</li>
+        </ul>
+        <a class="down-arrow" href="#contact" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
+      </div> <!-- wrapper -->
+    </section><!-- tools -->
+  </main>
+  <footer id="contact">
+    <div class="wrapper flex-center">
+      <h2>Get in Touch!</h2>
+      <div class="social-container">
+        <a href="mailto:lyns.odonnell@gmail.com" class="email-link">lyns.odonnell@gmail.com</a>
+        <div class="social-icons flex-center">
+          <a href="https://github.com/lynseyod"><span class="visually-hidden">GitHub</span><i aria-hidden="true" class="fab fa-github"></i></a>
+          <a href="https://twitter.com/lynseyo"><span class="visually-hidden">Twitter</span><i aria-hidden="true" class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/lynsey-o-donnell-82b667116/"><span class="visually-hidden">LinkedIn</span><i aria-hidden="true" class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

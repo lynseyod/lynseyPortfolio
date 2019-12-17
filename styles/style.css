@@ -238,12 +238,7 @@ h2 {
 section {
   padding: 2% 0;
   min-height: 100vh;
-}
-
-@media (max-width: 1023px) {
-  section {
-    padding-bottom: 200px;
-  }
+  padding-bottom: 200px;
 }
 
 a {
@@ -253,7 +248,7 @@ a {
 
 a.down-arrow {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -261,8 +256,8 @@ a.down-arrow {
   display: inline-block;
   height: 75px;
   width: 75px;
-  -webkit-animation: bounce 1s;
-          animation: bounce 1s;
+  -webkit-animation: bounce 5s infinite;
+          animation: bounce 5s infinite;
 }
 
 a.down-arrow img {
@@ -276,30 +271,30 @@ a.down-arrow img {
 }
 
 @-webkit-keyframes bounce {
-  0%, 50%, 100% {
+  0%, 10%, 20%, 100% {
     -webkit-transform: translateX(-50%) translateY(0);
             transform: translateX(-50%) translateY(0);
   }
-  25% {
+  5% {
     -webkit-transform: translateX(-50%) translateY(-50px);
             transform: translateX(-50%) translateY(-50px);
   }
-  75% {
+  15% {
     -webkit-transform: translateX(-50%) translateY(-25px);
             transform: translateX(-50%) translateY(-25px);
   }
 }
 
 @keyframes bounce {
-  0%, 50%, 100% {
+  0%, 10%, 20%, 100% {
     -webkit-transform: translateX(-50%) translateY(0);
             transform: translateX(-50%) translateY(0);
   }
-  25% {
+  5% {
     -webkit-transform: translateX(-50%) translateY(-50px);
             transform: translateX(-50%) translateY(-50px);
   }
-  75% {
+  15% {
     -webkit-transform: translateX(-50%) translateY(-25px);
             transform: translateX(-50%) translateY(-25px);
   }
@@ -407,8 +402,8 @@ h1 {
   width: 75%;
 }
 
-.profile p:first-of-type {
-  margin-bottom: 5%;
+.profile p:not(:last-of-type) {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1023px) {
@@ -460,7 +455,7 @@ h1 {
 }
 
 .project-container {
-  margin: 10% 0;
+  margin: 10% 0 0 0;
   width: 100%;
   min-height: 40vh;
   -webkit-box-pack: justify;

@@ -423,19 +423,19 @@ h1 {
 
 @-webkit-keyframes pic-switch {
   0%, 50%, 100% {
-    opacity: 0;
+    opacity: 100;
   }
   1%, 49% {
-    opacity: 100;
+    opacity: 0;
   }
 }
 
 @keyframes pic-switch {
   0%, 50%, 100% {
-    opacity: 0;
+    opacity: 100;
   }
   1%, 49% {
-    opacity: 100;
+    opacity: 0;
   }
 }
 
@@ -497,12 +497,19 @@ h1 {
 }
 
 .project-container {
-  margin: 10% 0 0 0;
   width: 100%;
   min-height: 40vh;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.project-container:not(:first-of-type) {
+  margin: 10% 0 0 0;
+}
+
+.project-container:first-of-type {
+  margin: 5% 0 0 0;
 }
 
 .project-container:nth-of-type(2n) .project-description {

@@ -20,7 +20,12 @@
 }
 
 .project-container {
-  margin: 10% 0 0 0;
+  &:not(:first-of-type) {
+    margin: 10% 0 0 0;
+  }
+  &:first-of-type {
+    margin: 5% 0 0 0;
+  }
   width: 100%;
   min-height: 40vh;
   justify-content: space-between;

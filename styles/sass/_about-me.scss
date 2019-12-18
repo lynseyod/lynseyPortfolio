@@ -53,10 +53,10 @@
 
 @keyframes pic-switch {
   0%, 50%, 100% {
-    opacity: 0;
+    opacity: 100;
   }
   1%, 49% {
-    opacity: 100;
+    opacity: 0;
   }
 }
 

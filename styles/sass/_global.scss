@@ -33,6 +33,12 @@ li {
   padding: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: $header-font;
+}
+
 ul,
 li {
   list-style-type: none;
@@ -45,6 +51,10 @@ img {
 h2 {
   position: relative;
   text-align: center;
+  font-size: 3rem;
+}
+
+h3 {
   font-size: 2rem;
 }
 

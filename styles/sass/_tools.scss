@@ -16,17 +16,14 @@
       align-items: center;
       justify-content: center;
       padding: 2%;
-      &:nth-of-type(4n) {
+      &:nth-of-type(3n) {
         @include li-background-spot('./assets/color-spot-2-turq.png');
       }
-      &:nth-of-type(4n + 1) {
+      &:nth-of-type(3n + 1) {
         @include li-background-spot('./assets/color-spot-2-pink.png');
       }
-      &:nth-of-type(4n + 2) {
-        @include li-background-spot('./assets/color-spot-2-blue.png');
-      }
-      &:nth-of-type(4n + 3) {
-        @include li-background-spot('./assets/color-spot-2-orange.png')
+      &:nth-of-type(3n + 2) {
+        @include li-background-spot('./assets/color-spot-2-orange.png');
       }
       i {
         font-size: 2rem;

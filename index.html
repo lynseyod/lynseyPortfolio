@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Allura|Poppins:400,700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3d22ae5abd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles/style.css">
   <title>Lynsey Codes!</title>
@@ -13,7 +13,7 @@
   <header class="flex-center relative">
     <h1>Lynsey O'Donnell</h1>
     <p>Web Developer</p>
-    <p>On the hunt for a great opportunity!</p>
+    <p>on the hunt for a great opportunity!</p>
     <a class="down-arrow" href="#about-me" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
   </header>
   <main>
@@ -26,8 +26,8 @@
           </div>
           <div class="profile">
             <p>Hi, I'm Lynsey, but you may have guessed that based on the large header up there.</p>
-            <p>My passion for development stems from my love of problem solving: I love working through a challenge and reaching a creative solution.  In Dungeons and Dragons, I've successfully avoided combat scenarios by feeding monsters who otherwise may have hurt my adventuring party (#bardlife).  In javascript, I've worked painstakingly through a sort feature to sort objects based on their property values, rather than using a lodash method.</p>
-            <p>I bring with me a hunger for learning new things (React Hooks, anyone?) and sharing my knowledge with others.  At the end of the day, I love working with people and interacting with teammates and clients alike - something that kept me in retail for more than 10 years before exploring this passion!</p>
+            <p>My passion for development stems from my love of problem solving and finding creative solutions: in Dungeons and Dragons, I've avoided combat by feeding monsters who otherwise may have posed a threat (#bardlife); in javascript, I've worked out a sort feature for objects based on their property values, rather than using a lodash method.</p>
+            <p>I bring with me a hunger for learning new things (React Hooks, anyone?) and sharing my knowledge with others.  At the end of the day, I love working with people and interacting with teammates and clients alike.</p>
           </div> <!-- profile -->
         </div> <!-- flex-center -->
         <a class="down-arrow" href="#projects" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
@@ -41,17 +41,33 @@
             <img src="./styles/assets/rolling-index-laptop.png" alt="a screenshot of contact cards">
           </div>
           <div class="project-description flex-center">
-            <h3><a href="https://lynseyod.github.io/lynseyODonnellProject5/">Rolling Index</a></h3>
-            <p><span class="info">Uses:</span>
-              <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
-              <span class="visually-hidden">HTML5</span>
-              <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
-              <span class="visually-hidden">Sass</span>
-              <i aria-hidden="true" class="fab fa-react" title="react"></i>
-              <span class="visually-hidden">React</span>
+            <h3>Rolling Index</h3>
+            <div class="tech-stack flex-center">
+              <p class="info">Tech stack:</p>
+                <ul class="flex-center">
+                  <li>
+                    <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
+                    <span>HTML5</span>
+                  </li>
+                  <li>
+                    <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
+                    <span>Sass</span>
+                  </li>
+                  <li>
+                    <i aria-hidden="true" class="fab fa-react" title="react"></i>
+                    <span>React</span>
+                  </li>
+                  <li>
+                    <i aria-hidden="true" class="fab fa-google" title="Firebase"></i>
+                    <span>Firebase</span>
+                  </li>
+                </ul>
+            </div>
+            <p>An online rolodex for freelancers and job-seekers; sortable by last name, company, or date contacted.</p>
+            <p class="project-link">
+              <a href="https://lynseyod.github.io/lynseyODonnellProject5/">View Live</a>
+              <a href="https://github.com/lynseyod/lynseyODonnellProject5">View on GitHub</a>
             </p>
-            <p>An online rolodex for freelancers and job-seekers.</p>
-            <p>Contact inforamtion is stored in Firebase. Contacts can be sorted by last name, company, or last date contacted.</p>
           </div>
         </div> <!-- rolling index -->
         <div class="project-container flex-center">
@@ -59,17 +75,30 @@
             <img src="./styles/assets/cat-sweeper-laptop.png" alt="a screenshot of catsweeper">
           </div>
           <div class="project-description flex-center">
-            <h3><a href="https://lynseyod.github.io/lynseyODonnellProject3/">Catsweeper!</a></h3>
-            <p><span class="info">Uses:</span>
-              <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
-              <span class="visually-hidden">HTML5</span>
-              <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
-              <span class="visually-hidden">Sass</span>
-              <i aria-hidden="true" class="fab fa-js-square" title="JavaScript"></i>
-              <span class="visually-hidden">JavaScript</span>
-            </p>
+            <h3>Catsweeper!</h3>
+            <div class="tech-stack flex-center">
+              <p class="info">Tech stack:</p>
+                <ul class="flex-center">
+                  <li>
+                    <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
+                    <span>HTML5</span>
+                  </li>
+                  <li>
+                    <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
+                    <span>Sass</span>
+                  </li>
+                  <li>
+                    <i aria-hidden="true" class="fab fa-js-square" title="JavaScript"></i>
+                    <span>JavaScript</span>
+                  </li>
+                </ul>
+              
+            </div>
             <p>A minesweeper game with cats <span class="aside">(because, Internet)</span>.</p>
-            <p>Players click squares to uncover the number of 'cats' they are adjacent to. Try not to wake the sleeping felines!</p>
+            <p class="project-link">
+              <a href="https://lynseyod.github.io/lynseyODonnellProject3/">View Live</a>
+              <a href="https://github.com/lynseyod/lynseyODonnellProject3">View on GitHub</a>
+            </p>
           </div>
         </div> <!-- catsweeper-->
         <div class="project-container flex-center">
@@ -77,19 +106,33 @@
             <img src="./styles/assets/backronym-generator-laptop.png" alt="screenshot of backronym generator">
           </div>
           <div class="project-description flex-center">
-            <h3><a href="https://groupprojectsix.github.io/projectSix/">Backronym Generator</a></h3>
-            <p><span class="info">Uses:</span>
-              <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
-              <span class="visually-hidden">HTML5</span>
-              <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
-              <span class="visually-hidden">Sass</span>
-              <i aria-hidden="true" class="fab fa-react" title="React"></i>
-              <span class="visually-hidden">React</span>
-              <i aria-hidden="true" class="fas fa-code-branch" title="Git"></i>
-              <span class="visually-hidden">Git/Github</span>
+            <h3>Backronym Generator</h3>
+            <div class="tech-stack flex-center">
+              <p class="info">Tech stack:</p>
+              <ul class="flex-center">
+                <li>
+                  <i aria-hidden="true" class="fab fa-html5" title="HTML5"></i>
+                  <span>HTML5</span>  
+                </li>
+                <li>
+                  <i aria-hidden="true" class="fab fa-sass" title="Sass"></i>
+                  <span>Sass</span>  
+                </li>
+                <li>
+                  <i aria-hidden="true" class="fab fa-react" title="React"></i>
+                  <span>React</span>  
+                </li>
+                <li>
+                  <i aria-hidden="true" class="fas fa-code-branch" title="Git"></i>
+                  <span>Git/Github</span>  
+                </li>
+              </ul>
+            </div>
+            <p>A fun way to shoehorn your acronyms! Built with <a href="sandy.codes">Sandy Pranjic</a>, <a href="http://wadebutler.ca/">Wade Butler</a> and Bethan Davies</p>
+            <p class="project-link">
+              <a href="https://groupprojectsix.github.io/projectSix/">View Live</a>
+              <a href="https://github.com/groupprojectsix/projectSix">View on GitHub</a>
             </p>
-            <p>A fun way to shoehorn your acronyms!</p>
-            <p>Uses the datamuse API to generate a backronym based on a user-generated word. Built with 3 classmates using React and collaborating through Git/GitHub.</p>
           </div>
 
         </div> <!-- backronym generator-->
@@ -107,6 +150,7 @@
           <li><i aria-hidden="true" class="fab fa-react" title="React"></i>React</li>
           <li><i aria-hidden="true" class="fas fa-code-branch" title="Git"></i>Git</li>
           <li><i aria-hidden="true" class="fab fa-google"></i>Firebase</li>
+          <li><i aria-hidden="true" class="fas fa-universal-access"></i>Accessibility</li>  
         </ul>
         <a class="down-arrow" href="#contact" class="flex-center"><img src="./styles/assets/down-arrow.png" alt="an arrow pointing invitingly downward"></a>
       </div> <!-- wrapper -->
@@ -125,5 +169,6 @@
       </div>
     </div>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>

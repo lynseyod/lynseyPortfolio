@@ -220,6 +220,12 @@ li {
   padding: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Allura", cursive;
+}
+
 ul,
 li {
   list-style-type: none;
@@ -232,6 +238,10 @@ img {
 h2 {
   position: relative;
   text-align: center;
+  font-size: 3rem;
+}
+
+h3 {
   font-size: 2rem;
 }
 
@@ -316,6 +326,7 @@ header {
 
 header h1 {
   text-align: center;
+  font-size: 4rem;
 }
 
 header .down-arrow {
@@ -440,7 +451,7 @@ h1 {
   z-index: -10;
 }
 
-.projects p {
+.projects > p {
   width: 100%;
 }
 
@@ -483,8 +494,8 @@ h1 {
   position: absolute;
   top: -25%;
   left: -25%;
-  height: 125%;
-  width: 125%;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   opacity: 70%;
   background-image: url("./assets/color-spot-pink.png");
@@ -497,11 +508,11 @@ h1 {
   content: '';
   display: block;
   position: absolute;
-  top: 30%;
-  right: 5%;
-  height: 70%;
-  width: 70%;
-  z-index: 10;
+  top: -25%;
+  left: -25%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
   opacity: 70%;
   background-image: url("./assets/color-spot-turq.png");
   background-position: bottom right;
@@ -515,8 +526,8 @@ h1 {
   position: absolute;
   top: -25%;
   left: -25%;
-  height: 125%;
-  width: 125%;
+  height: 100%;
+  width: 100%;
   z-index: -1;
   opacity: 70%;
   background-image: url("./assets/color-spot-orange.png");
@@ -576,18 +587,6 @@ h1 {
   width: 35%;
   position: relative;
   z-index: 10;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.image-container::after {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.image-container:hover, .image-container:hover::after {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 @media (max-width: 1023px) {
@@ -609,20 +608,44 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   width: 50%;
-  height: 100%;
+  min-height: 40vh;
 }
 
 @media (max-width: 1023px) {
   .project-description {
     width: 100%;
   }
+}
+
+.tech-stack {
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tech-stack p {
+  display: inline-block;
+}
+
+.tech-stack ul li {
+  text-align: center;
+  line-height: 0.7;
+}
+
+.tech-stack ul li span {
+  font-size: 0.6rem;
+}
+
+.project-link a:nth-of-type(2) {
+  margin-left: 30px;
 }
 
 .info {
@@ -681,28 +704,21 @@ h1 {
   padding: 2%;
 }
 
-.tools .toolbox li:nth-of-type(4n) {
+.tools .toolbox li:nth-of-type(3n) {
   background-image: url("./assets/color-spot-2-turq.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.tools .toolbox li:nth-of-type(4n + 1) {
+.tools .toolbox li:nth-of-type(3n + 1) {
   background-image: url("./assets/color-spot-2-pink.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.tools .toolbox li:nth-of-type(4n + 2) {
-  background-image: url("./assets/color-spot-2-blue.png");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.tools .toolbox li:nth-of-type(4n + 3) {
+.tools .toolbox li:nth-of-type(3n + 2) {
   background-image: url("./assets/color-spot-2-orange.png");
   background-size: 50%;
   background-repeat: no-repeat;

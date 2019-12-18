@@ -6,7 +6,7 @@
     z-index: 10;
     @include header-shadow($pop)
   }
-  p {
+  & > p {
     width: 100%;
   }
   i {
@@ -34,59 +34,17 @@
   }
   &:nth-of-type(3n) {
     .image-container {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -25%;
-        left: -25%;
-        height: 125%;
-        width: 125%;
-        z-index: -1;
-        opacity: 70%;
-        background-image: url('./assets/color-spot-pink.png');
-        background-position: bottom right;
-        background-size: 80%;
-        background-repeat: no-repeat;
-      }    
+      @include project-background-spot('./assets/color-spot-pink.png');
     }
   }
   &:nth-of-type(3n + 1) {
     .image-container {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 30%;
-        right: 5%;
-        height: 70%;
-        width: 70%;
-        z-index: 10;
-        opacity: 70%;
-        background-image: url('./assets/color-spot-turq.png');
-        background-position: bottom right;
-        background-size: 80%;
-        background-repeat: no-repeat;
-      }  
+      @include project-background-spot('./assets/color-spot-turq.png');
     }
   }
   &:nth-of-type(3n + 2) {
     .image-container {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -25%;
-        left: -25%;
-        height: 125%;
-        width: 125%;
-        z-index: -1;
-        opacity: 70%;
-        background-image: url('./assets/color-spot-orange.png');
-        background-position: bottom right;
-        background-size: 80%;
-        background-repeat: no-repeat;
-      }    
+      @include project-background-spot('./assets/color-spot-orange.png');
     }
   }
   a {
@@ -111,14 +69,6 @@
   width: 35%;
   position: relative;
   z-index: 10;
-  transition: all 0.3s;
-  &::after {
-    transition: all 0.3s;
-  }
-  &:hover,
-  &:hover::after {
-    transform: scale(1.2);
-  }
   @include mq-tablet {
     width: 50%;
     align-self: flex-end;
@@ -131,12 +81,35 @@
 
 .project-description {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   width: 50%;
-  height: 100%;
+  min-height: 40vh;
   @include mq-tablet {
     width: 100%;
+  }
+}
+
+.tech-stack{
+  width: 100%;
+  justify-content: flex-start;
+  p {
+    display: inline-block;
+  }
+  ul {
+    li {
+      text-align: center;
+      line-height: 0.7;
+      span {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+
+.project-link {
+  a:nth-of-type(2) {
+    margin-left: 30px;
   }
 }
 

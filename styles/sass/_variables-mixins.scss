@@ -1,4 +1,5 @@
 $font: 'Poppins', sans-serif;
+$header-font: 'Allura', cursive;
 $main-light: #c2f7ff;
 $main-col: #23b1a5;
 $main-dark: #1d1144;
@@ -52,6 +53,23 @@ $pop2: #f56a47;
   background-position: center;
 }
 
+@mixin project-background-spot($asset) {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 70%;
+    background-image: url($asset);
+    background-position: bottom right;
+    background-size: 80%;
+    background-repeat: no-repeat;
+  }
+}
 
 @mixin mq-tablet {
   @media (max-width: 1023px) {

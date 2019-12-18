@@ -39,6 +39,27 @@
   }
 }
 
+.headshot1 {
+  opacity: 100;
+}
+
+.headshot2 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pic-switch 10s infinite;
+}
+
+@keyframes pic-switch {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+  1%, 49% {
+    opacity: 100;
+  }
+}
+
 .profile {
   margin-left: 5%;
   width: 75%;

@@ -182,6 +182,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-size: 125%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -258,7 +259,7 @@ a {
 
 a.down-arrow {
   position: absolute;
-  bottom: 10%;
+  bottom: 50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -381,6 +382,8 @@ h1 {
 .headshot {
   width: 20%;
   position: relative;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 
 .headshot::after {
@@ -406,6 +409,12 @@ h1 {
     width: 50%;
     margin-bottom: 10%;
   }
+}
+
+.headshot1,
+.headshot2 {
+  padding: 10px 10px 50px 10px;
+  border: 1px solid black;
 }
 
 .headshot1 {
@@ -510,6 +519,12 @@ h1 {
 
 .project-container:first-of-type {
   margin: 5% 0 0 0;
+}
+
+@media (max-width: 500px) {
+  .project-container:first-of-type {
+    margin: 15% 0 0 0;
+  }
 }
 
 .project-container:nth-of-type(2n) .project-description {

@@ -16,6 +16,7 @@
 .headshot {
   width: 20%;
   position: relative;
+  transform: rotate(10deg);
   &::after {
     content: '';
     display: block;
@@ -37,6 +38,12 @@
     width: 50%;
     margin-bottom: 10%;
   }
+}
+
+.headshot1,
+.headshot2 {
+  padding: 10px 10px 50px 10px;
+  border: 1px solid black;
 }
 
 .headshot1 {

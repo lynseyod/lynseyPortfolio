@@ -25,6 +25,9 @@
   }
   &:first-of-type {
     margin: 5% 0 0 0;
+    @include mq-mobile {
+      margin: 15% 0 0 0;
+    }
   }
   width: 100%;
   min-height: 40vh;

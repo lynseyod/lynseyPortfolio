@@ -79,6 +79,8 @@ $pop2: #84b082;
     display: block;
     position: absolute;
     top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: $width;
     height: 100%;
     background-color: white;

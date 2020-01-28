@@ -9,6 +9,7 @@
   .toolbox {
     flex-wrap: wrap;
     align-content: center;
+    margin: 2% 0;
     li {
       height: 200px;
       width: 25%;
@@ -22,13 +23,13 @@
         width: calc(50% - 40px);
       }
       &:nth-of-type(3n) {
-        transform: rotate(30deg);
+        transform: rotate(15deg);
         i {
           color: $main-light;
         }
       }
       &:nth-of-type(3n + 1) {
-        transform: rotate(-30deg);
+        transform: rotate(-15deg);
         i {
           color: $pop;
         }

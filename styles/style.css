@@ -190,7 +190,7 @@ body {
   background-image: url("./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-attachment: fixed;
   background-position: bottom left;
 }
 
@@ -357,7 +357,7 @@ header h1 {
     background-image: url("./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: fixed;
+    background-attachment: fixed;
     background-position: bottom left;
   }
 }
@@ -1201,7 +1201,7 @@ footer .email-link:hover::after, footer .email-link:focus::after {
     background-image: url("./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: fixed;
+    background-attachment: fixed;
     background-position: bottom left;
   }
   footer * {

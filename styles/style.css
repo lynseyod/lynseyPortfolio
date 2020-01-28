@@ -404,7 +404,6 @@ h1 {
   top: 85%;
   left: 0;
   width: 100%;
-  z-index: 10;
 }
 
 .headshot:hover {
@@ -575,10 +574,6 @@ h1 {
   }
 }
 
-.headshot1 {
-  opacity: 100;
-}
-
 .headshot2 {
   opacity: 0;
   position: absolute;
@@ -629,6 +624,8 @@ h1 {
 
 .projects {
   position: relative;
+  background-color: #efe0de;
+  padding-bottom: 150px;
 }
 
 .projects h2 {
@@ -663,7 +660,7 @@ h1 {
 }
 
 .projects .down-arrow {
-  background-color: #885a5a;
+  background-color: #dc136c;
   bottom: 2%;
 }
 
@@ -701,54 +698,6 @@ h1 {
         -ms-flex-order: 1;
             order: 1;
   }
-}
-
-.project-container:nth-of-type(3n) .image-container::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -25%;
-  left: -25%;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 70%;
-  background-image: url("./assets/color-spot-pink.png");
-  background-position: bottom right;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-
-.project-container:nth-of-type(3n + 1) .image-container::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -25%;
-  left: -25%;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 70%;
-  background-image: url("./assets/color-spot-turq.png");
-  background-position: bottom right;
-  background-size: 80%;
-  background-repeat: no-repeat;
-}
-
-.project-container:nth-of-type(3n + 2) .image-container::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -25%;
-  left: -25%;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 70%;
-  background-image: url("./assets/color-spot-orange.png");
-  background-position: bottom right;
-  background-size: 80%;
-  background-repeat: no-repeat;
 }
 
 .project-container a {
@@ -867,9 +816,72 @@ h1 {
   font-weight: bold;
 }
 
+.slide-in div:first-child {
+  -webkit-animation: slide-left 0.5s linear;
+          animation: slide-left 0.5s linear;
+}
+
+.slide-in div:nth-child(2) {
+  -webkit-animation: slide-right 0.5s linear;
+          animation: slide-right 0.5s linear;
+}
+
+@-webkit-keyframes slide-left {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
 .tools {
   min-height: 100vh;
   position: relative;
+  background-color: #efe0de;
 }
 
 .tools h2 {
@@ -913,41 +925,108 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
 }
 
 .tools .toolbox li:nth-of-type(3n) {
-  background-image: url("./assets/color-spot-2-turq.png");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
 
+.tools .toolbox li:nth-of-type(3n)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  z-index: -1;
+}
+
+.tools .toolbox li:nth-of-type(3n)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: calc(50% - 40px);
+  height: 60%;
+  background-color: #353a47;
+}
+
+.tools .toolbox li:nth-of-type(3n) i {
+  color: #efe0de;
+}
+
 .tools .toolbox li:nth-of-type(3n + 1) {
-  background-image: url("./assets/color-spot-2-pink.png");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
 }
 
+.tools .toolbox li:nth-of-type(3n + 1)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  z-index: -1;
+}
+
+.tools .toolbox li:nth-of-type(3n + 1)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: calc(50% - 40px);
+  height: 60%;
+  background-color: #353a47;
+}
+
+.tools .toolbox li:nth-of-type(3n + 1) i {
+  color: #dc136c;
+}
+
 .tools .toolbox li:nth-of-type(3n + 2) {
-  background-image: url("./assets/color-spot-2-orange.png");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
 }
 
+.tools .toolbox li:nth-of-type(3n + 2)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  z-index: -1;
+}
+
+.tools .toolbox li:nth-of-type(3n + 2)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: calc(50% - 40px);
+  height: 60%;
+  background-color: #353a47;
+}
+
+.tools .toolbox li:nth-of-type(3n + 2) i {
+  color: #84b082;
+}
+
 .tools .toolbox li i {
   font-size: 2rem;
+  z-index: 5;
+  margin-top: 20px;
 }
 
 @media (max-width: 1023px) {
@@ -957,7 +1036,7 @@ h1 {
 }
 
 .tools .down-arrow {
-  background-color: #efe0de;
+  background-color: #885a5a;
 }
 
 footer {

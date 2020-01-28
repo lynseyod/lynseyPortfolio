@@ -64,37 +64,26 @@ $pop2: #84b082;
   }
 }
 
-@mixin li-background-spot($asset) {
-  background-image: url($asset);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@mixin fall-in-animation($rotate) {
-  from {
-    transform: rotate(0) scale(2);
-  }
-  to {
-    transform: rotate($rotate) scale(1);
-  }  
-}
-
-@mixin project-background-spot($asset) {
+@mixin li-background-polaroid {
   &::after {
     content: '';
     display: block;
     position: absolute;
-    top: -25%;
-    left: -25%;
+    top: -15px;
+    width: 50%;
     height: 100%;
-    width: 100%;
+    background-color: white;
+    border: 1px solid black;
     z-index: -1;
-    opacity: 70%;
-    background-image: url($asset);
-    background-position: bottom right;
-    background-size: 80%;
-    background-repeat: no-repeat;
+  }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    width: calc(50% - 40px);
+    height: 60%;
+    background-color: $main-dark;
   }
 }
 

@@ -1,6 +1,7 @@
 .tools {
   min-height: 100vh;
   position: relative;
+  background-color: $main-light;
   h2 {
     margin-bottom: 2%;
     @include header-shadow($main-col)
@@ -14,22 +15,33 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 2%;
+      justify-content: space-around;
+      position: relative;
       &:nth-of-type(3n) {
-        @include li-background-spot('./assets/color-spot-2-turq.png');
+        @include li-background-polaroid;
         transform: rotate(30deg);
+        i {
+          color: $main-light;
+        }
       }
       &:nth-of-type(3n + 1) {
-        @include li-background-spot('./assets/color-spot-2-pink.png');
+        @include li-background-polaroid;
         transform: rotate(-30deg);
+        i {
+          color: $pop;
+        }
       }
       &:nth-of-type(3n + 2) {
-        @include li-background-spot('./assets/color-spot-2-orange.png');
+        @include li-background-polaroid;
         transform: rotate(-5deg);
+        i {
+          color: $pop2;
+        }
       }
       i {
         font-size: 2rem;
+        z-index: 5;
+        margin-top: 20px;
       }
       @include mq-tablet {
         width: 50%;
@@ -37,6 +49,6 @@
     }
   }
   .down-arrow {
-    background-color: $main-light;
+    background-color: $main-col;
   }
 }

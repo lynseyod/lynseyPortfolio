@@ -7,14 +7,13 @@ header {
     flex-direction: column;
     height: 90%;
     width: 90%;
-    border: 1px solid white;
+    @include inner-border($main-light);
   }
   h1 {
     text-align: center;
     font-size: 4rem;
-  }
-  @include mq-tablet {
-    background-size: 80%;
+    position: relative;
+    text-shadow: 1px 1px 1px $main-light;
   }
 }
 

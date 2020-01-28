@@ -1,13 +1,7 @@
 $font: 'Poppins', sans-serif;
 $header-font: 'Allura', cursive;
-// $main-light: #c2f7ff;
-// $main-col: #23b1a5;
-// $main-dark: #1d1144;
-// $pop: #ff6799;
-// $pop2: #f56a47;
 
 $main-col: #885a5a;
-// $main-light: #f7c1bb;
 $main-light: #efe0de;
 $main-dark: #353a47;
 $pop: #dc136c;
@@ -22,8 +16,8 @@ $pop2: #84b082;
     content: '';
     position: absolute;
     display: block;
-    height: 40%;
-    width: 125px;
+    height: 2%;
+    width: 30%;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -57,11 +51,33 @@ $pop2: #84b082;
   }
 }
 
+@mixin polaroid-text($text) {
+  &::before {
+    content: $text;
+    font-family: $header-font;
+    text-align: center;
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
 @mixin li-background-spot($asset) {
   background-image: url($asset);
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@mixin fall-in-animation($rotate) {
+  from {
+    transform: rotate(0) scale(2);
+  }
+  to {
+    transform: rotate($rotate) scale(1);
+  }  
 }
 
 @mixin project-background-spot($asset) {

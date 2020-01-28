@@ -69,19 +69,7 @@ h3 {
 section {
   padding: 2% 0;
   min-height: calc(100vh - 20px);
-  padding-bottom: 200px;
-  background-color: $main-light;
   margin: 5% 0;
-  &::before {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 10%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $pop2;
-  }
 }
 
 a {

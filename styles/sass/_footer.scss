@@ -32,6 +32,12 @@ footer {
     position: relative;
     @include anchor-shadow($pop2);
   }
+  @include mq-tablet {
+    @include background-image;
+    * {
+      text-shadow: 1px 1px 1px $main-light;
+    }
+  }
 }
 
 @keyframes social-hover {

@@ -6,12 +6,10 @@ html {
 
 body {
   font-family: $font;
-  background-image: url('./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg');
-  // Photo by Alina Sofia on Unsplash
-  background-size: cover;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  @include background-image;
+  @include mq-tablet {
+    background: $main-light;
+  }
 }
 
 .wrapper {

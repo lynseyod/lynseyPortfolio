@@ -17,22 +17,23 @@
       align-items: center;
       justify-content: space-around;
       position: relative;
+      @include li-background-polaroid(50%);
+      &::before {
+        width: calc(50% - 40px);
+      }
       &:nth-of-type(3n) {
-        @include li-background-polaroid;
         transform: rotate(30deg);
         i {
           color: $main-light;
         }
       }
       &:nth-of-type(3n + 1) {
-        @include li-background-polaroid;
         transform: rotate(-30deg);
         i {
           color: $pop;
         }
       }
       &:nth-of-type(3n + 2) {
-        @include li-background-polaroid;
         transform: rotate(-5deg);
         i {
           color: $pop2;
@@ -44,11 +45,21 @@
         margin-top: 20px;
       }
       @include mq-tablet {
-        width: 50%;
+        width: 30%;
+        @include li-background-polaroid(75%);
+        &::before {
+          width: calc(75% - 40px);
+        }
+      }
+      @include mq-mobile {
+        width: 100%;
       }
     }
   }
   .down-arrow {
     background-color: $main-col;
+  }
+  @include mq-mobile {
+    padding-bottom: 150px;
   }
 }

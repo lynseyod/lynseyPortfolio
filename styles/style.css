@@ -189,9 +189,15 @@ body {
   font-family: "Poppins", sans-serif;
   background-image: url("./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg");
   background-size: cover;
-  background-position: bottom left;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: fixed;
+  background-position: bottom left;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background: #efe0de;
+  }
 }
 
 .wrapper {
@@ -326,6 +332,7 @@ header {
   width: 100%;
   height: 100vh;
   margin: 0 0 5vh 0;
+  text-align: center;
 }
 
 header .inner-border {
@@ -345,13 +352,23 @@ header h1 {
   text-shadow: 1px 1px 1px #efe0de;
 }
 
+@media (max-width: 1023px) {
+  header {
+    background-image: url("./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-position: bottom left;
+  }
+}
+
 h1 {
   font-size: 3rem;
   margin-bottom: 2%;
 }
 
 .about-me {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #efe0de;
 }
 
@@ -401,7 +418,7 @@ h1 {
   font-family: "Allura", cursive;
   text-align: center;
   position: absolute;
-  top: 85%;
+  bottom: 2%;
   left: 0;
   width: 100%;
 }
@@ -416,9 +433,12 @@ h1 {
 
 @media (max-width: 1023px) {
   .headshot {
-    float: left;
-    width: 50%;
+    width: 25%;
     margin-bottom: 10%;
+  }
+  .headshot::before {
+    font-size: 90%;
+    line-height: 1;
   }
 }
 
@@ -431,6 +451,19 @@ h1 {
   content: "St John's: June 2019";
 }
 
+@media (max-width: 1023px) {
+  .headshot:nth-of-type(1) {
+    left: 60%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .headshot:nth-of-type(1) {
+    top: 7%;
+  }
+}
+
 .headshot:nth-of-type(2) {
   left: 10%;
   top: 15%;
@@ -438,6 +471,19 @@ h1 {
 
 .headshot:nth-of-type(2)::before {
   content: "Paris: June 2018";
+}
+
+@media (max-width: 1023px) {
+  .headshot:nth-of-type(2) {
+    left: 45%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .headshot:nth-of-type(2) {
+    top: 7%;
+  }
 }
 
 .headshot:nth-of-type(3) {
@@ -449,6 +495,18 @@ h1 {
   content: "Me and literally 6000 bottles of champagne";
 }
 
+@media (max-width: 1023px) {
+  .headshot:nth-of-type(3) {
+    top: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .headshot:nth-of-type(3) {
+    top: 7%;
+  }
+}
+
 .headshot:nth-of-type(4) {
   left: 10%;
   top: 25%;
@@ -456,6 +514,19 @@ h1 {
 
 .headshot:nth-of-type(4)::before {
   content: "Super professional headshot";
+}
+
+@media (max-width: 1023px) {
+  .headshot:nth-of-type(4) {
+    left: 30%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .headshot:nth-of-type(4) {
+    top: 7%;
+  }
 }
 
 .fall-in-1 {
@@ -613,7 +684,7 @@ h1 {
 
 @media (max-width: 1023px) {
   .profile {
-    margin-left: 0;
+    margin: 60% 0 150px 0;
     width: 100%;
   }
 }
@@ -662,6 +733,13 @@ h1 {
 .projects .down-arrow {
   background-color: #dc136c;
   bottom: 2%;
+}
+
+@media (max-width: 1023px) {
+  .projects {
+    background: #84b082;
+    padding-top: 7%;
+  }
 }
 
 .project-container {
@@ -930,12 +1008,7 @@ h1 {
   position: relative;
 }
 
-.tools .toolbox li:nth-of-type(3n) {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-}
-
-.tools .toolbox li:nth-of-type(3n)::after {
+.tools .toolbox li::after {
   content: '';
   display: block;
   position: absolute;
@@ -947,14 +1020,22 @@ h1 {
   z-index: -1;
 }
 
-.tools .toolbox li:nth-of-type(3n)::before {
+.tools .toolbox li::before {
   content: '';
   display: block;
   position: absolute;
   top: 10px;
-  width: calc(50% - 40px);
   height: 60%;
   background-color: #353a47;
+}
+
+.tools .toolbox li::before {
+  width: calc(50% - 40px);
+}
+
+.tools .toolbox li:nth-of-type(3n) {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
 }
 
 .tools .toolbox li:nth-of-type(3n) i {
@@ -966,28 +1047,6 @@ h1 {
           transform: rotate(-30deg);
 }
 
-.tools .toolbox li:nth-of-type(3n + 1)::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -15px;
-  width: 50%;
-  height: 100%;
-  background-color: white;
-  border: 1px solid black;
-  z-index: -1;
-}
-
-.tools .toolbox li:nth-of-type(3n + 1)::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 10px;
-  width: calc(50% - 40px);
-  height: 60%;
-  background-color: #353a47;
-}
-
 .tools .toolbox li:nth-of-type(3n + 1) i {
   color: #dc136c;
 }
@@ -995,28 +1054,6 @@ h1 {
 .tools .toolbox li:nth-of-type(3n + 2) {
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
-}
-
-.tools .toolbox li:nth-of-type(3n + 2)::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -15px;
-  width: 50%;
-  height: 100%;
-  background-color: white;
-  border: 1px solid black;
-  z-index: -1;
-}
-
-.tools .toolbox li:nth-of-type(3n + 2)::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 10px;
-  width: calc(50% - 40px);
-  height: 60%;
-  background-color: #353a47;
 }
 
 .tools .toolbox li:nth-of-type(3n + 2) i {
@@ -1031,12 +1068,46 @@ h1 {
 
 @media (max-width: 1023px) {
   .tools .toolbox li {
-    width: 50%;
+    width: 30%;
+  }
+  .tools .toolbox li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    z-index: -1;
+  }
+  .tools .toolbox li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    height: 60%;
+    background-color: #353a47;
+  }
+  .tools .toolbox li::before {
+    width: calc(75% - 40px);
+  }
+}
+
+@media (max-width: 500px) {
+  .tools .toolbox li {
+    width: 100%;
   }
 }
 
 .tools .down-arrow {
   background-color: #885a5a;
+}
+
+@media (max-width: 500px) {
+  .tools {
+    padding-bottom: 150px;
+  }
 }
 
 footer {
@@ -1123,6 +1194,19 @@ footer .email-link::after {
 
 footer .email-link:hover::after, footer .email-link:focus::after {
   width: 100%;
+}
+
+@media (max-width: 1023px) {
+  footer {
+    background-image: url("./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-position: bottom left;
+  }
+  footer * {
+    text-shadow: 1px 1px 1px #efe0de;
+  }
 }
 
 @-webkit-keyframes social-hover {

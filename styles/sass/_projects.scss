@@ -18,6 +18,10 @@
     background-color: $pop;
     bottom: 2%;
   }
+  @include mq-tablet {
+    background: $pop2;
+    padding-top: 7%;
+  }
 }
 
 .project-container {

@@ -3,6 +3,7 @@ header {
   width: 100%;
   height: 100vh;
   margin: 0 0 5vh 0;
+  text-align: center;
   .inner-border {
     flex-direction: column;
     height: 90%;
@@ -14,6 +15,9 @@ header {
     font-size: 4rem;
     position: relative;
     text-shadow: 1px 1px 1px $main-light;
+  }
+  @include mq-tablet {
+    @include background-image;
   }
 }
 

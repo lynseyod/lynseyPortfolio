@@ -1,10 +1,21 @@
 $font: 'Poppins', sans-serif;
 $header-font: 'Allura', cursive;
-$main-light: #c2f7ff;
-$main-col: #23b1a5;
-$main-dark: #1d1144;
-$pop: #ff6799;
-$pop2: #f56a47;
+// $main-light: #c2f7ff;
+// $main-col: #23b1a5;
+// $main-dark: #1d1144;
+// $pop: #ff6799;
+// $pop2: #f56a47;
+
+$main-col: #885a5a;
+// $main-light: #f7c1bb;
+$main-light: #efe0de;
+$main-dark: #353a47;
+$pop: #dc136c;
+$pop2: #84b082;
+
+@mixin inner-border($color) {
+  border: 1px solid $color;
+}
 
 @mixin header-shadow($color) {
   &::after {

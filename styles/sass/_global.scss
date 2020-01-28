@@ -6,6 +6,12 @@ html {
 
 body {
   font-family: $font;
+  background-image: url('./assets/alina-sofia-4FttS_QUqw8-unsplash.jpg');
+  // Photo by Alina Sofia on Unsplash
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -38,6 +44,7 @@ h1,
 h2,
 h3 {
   font-family: $header-font;
+  z-index: 10;
 }
 
 ul,
@@ -61,8 +68,20 @@ h3 {
 
 section {
   padding: 2% 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   padding-bottom: 200px;
+  background-color: $main-light;
+  margin: 5% 0;
+  &::before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 10%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $pop2;
+  }
 }
 
 a {
@@ -79,6 +98,7 @@ a.down-arrow {
   display: inline-block;
   height: 75px;
   width: 75px;
+  background: rgba(255, 255, 255, 0.5);
   animation: bounce 5s infinite;
   img {
     height: 50%;

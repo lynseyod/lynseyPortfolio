@@ -2,17 +2,16 @@ header {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: $main-light;
-  background-image: url('./assets/header-color-spot.png');
-  background-size: 90vh;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0 0 5vh 0;
+  .inner-border {
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    border: 1px solid white;
+  }
   h1 {
     text-align: center;
     font-size: 4rem;
-  }
-  .down-arrow {
-    background-color: white;
   }
   @include mq-tablet {
     background-size: 80%;

@@ -1,6 +1,7 @@
 .about-me {
+  max-height: 100vh;
   h2 {
-    margin-bottom: 2%;
+    margin-bottom: 0;
     @include header-shadow($pop2);
   }
   .down-arrow{
@@ -43,6 +44,7 @@
 .headshot1,
 .headshot2 {
   padding: 10px 10px 50px 10px;
+  background: white;
   border: 1px solid black;
 }
 
@@ -77,4 +79,8 @@
     margin-left: 0;
     width: 100%;
   }
+}
+
+.aside {
+  font-family: $header-font;
 }
